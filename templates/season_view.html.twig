@@ -1,0 +1,14 @@
+{% extends 'index.html.twig' %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<ul>
+    {% for season in seasons %}
+    <a
+        href="{{ path('episodes', { id_anime: season.id_anime, num_season: season.num_season } ) }}">{{season.num_season}}</a>
+    {% endfor %}
+</ul>
+{% endblock %}

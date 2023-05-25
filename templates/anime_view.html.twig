@@ -1,0 +1,23 @@
+{% extends 'index.html.twig' %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<h1>hello</h1>
+<div>
+    <ul>
+        {% for row in anime %}
+        <li>nom : {{ row.name }}</li>
+        <li>jap : {{ row.origin_name}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div>
+    <div class="video-container">
+        <video src={{ episode[0].url_video }} controls></video>
+        <video src={{ episode[1].url_video }} controls></video>
+    </div>
+</div>
+{% endblock %}

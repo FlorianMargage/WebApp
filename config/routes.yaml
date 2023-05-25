@@ -1,3 +1,19 @@
-#index:
+# index:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#    controller: App\Controller\IndexController::index
+
+anime:
+   path: /
+   controller: App\Controller\IndexController::animes
+
+season:
+   path: /{id_anime}/seasons
+   controller: App\Controller\IndexController::seasons
+
+episodes:
+   path: /{id_anime}/{num_season}/episodes
+   controller: App\Controller\IndexController::episodes
+
+view:
+   path: /{id_anime}/{num_season}/{num_episode}
+   controller: App\Controller\IndexController::view

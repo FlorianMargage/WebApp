@@ -1,0 +1,14 @@
+{% extends 'index.html.twig' %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<ul>
+    {% for episode in episodes %}
+    <a
+        href="{{ path('view', { id_anime: episode.id_anime, num_season: episode.num_season, num_episode: episode.num_episode } ) }}">{{episode.num_episode}}</a>
+    {% endfor %}
+</ul>
+{% endblock %}

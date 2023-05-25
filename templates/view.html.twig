@@ -1,0 +1,12 @@
+{% extends 'index.html.twig' %}
+
+{% block head %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<!-- <div class="video-container">
+    <video src={{ episode.url_video }} controls></video>
+</div> -->
+<iframe width=640 height=360 src={{ episode.url_video }}></iframe>
+{% endblock %}
