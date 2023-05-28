@@ -5,8 +5,8 @@ doctrine:
         host: 'mysql-fmargage.alwaysdata.net'
         port: 3306
         dbname: fmargage_anime
-        user: 'fmargage'
-        password: 'root11092002'
+        user: 'fmargage_dev'
+        password: 'rootdev0000'
 
 
         # url: '%env(resolve:DATABASE_URL)%'
